@@ -51,3 +51,12 @@ function atualizaEstatisticas(peca) {
         elemento.textContent = parseInt(elemento.textContent) + pecas[peca][elemento.dataset.estatistica];
     });
 };
+const paletaDeCores = document.querySelector("[data-botoes]");
+
+paletaDeCores.addEventListener("click", (elemento)=> {
+    manuipulaCores(elemento.target.dataset.cores);
+})
+function manuipulaCores(cor) {
+    const robo = document.querySelector("[robo]");
+    robo.src="img/Robotron 2000 - " + cor + ".png"
+}   
